@@ -91,14 +91,14 @@ app.delete("/list/:id", async (req, res) => {
   let result = await Users.deleteOne({ _id: req.params.id });
   res.send(result);
 });
-// Some code used for some reason but keeping it for reference
-// app.get("/*", function (req, res) {
-//   res.sendFile(path.join(__dirname, "public/index.html"), function (err) {
-//     if (err) {
-//       res.status(500).send(err);
-//     }
-//   });
-// });
+// Server rendering all the static files
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "public/index.html"), function (err) {
+    if (err) {
+      res.status(500).send(err);
+    }
+  });
+});
 
 app.listen(PORT, () => {
   console.log("Server is running");
