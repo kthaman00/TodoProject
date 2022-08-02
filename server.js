@@ -8,7 +8,8 @@ const PORT = 2500;
 //its the URL from Mongo database with user id and password
 
 const mongoURL =
-  "mongodb+srv://todo:todo@cluster0.0w18s6p.mongodb.net/?retryWrites=true&w=majority";
+  // "mongodb+srv://todo:todo@cluster0.0w18s6p.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb://todo:todo@ac-czzqjxi-shard-00-00.0w18s6p.mongodb.net:27017,ac-czzqjxi-shard-00-01.0w18s6p.mongodb.net:27017,ac-czzqjxi-shard-00-02.0w18s6p.mongodb.net:27017/?ssl=true&replicaSet=atlas-tragkv-shard-0&authSource=admin&retryWrites=true&w=majority";
 
 app.use(express.static("public"));
 app.use(express.json());
