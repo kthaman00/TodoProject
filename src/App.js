@@ -5,6 +5,7 @@ import TodoList from "../Components/TodoList";
 import EditItem from "../Components/EditItem";
 import CreateItem from "../Components/CreateItem";
 import TodoContext from "./Context/todoContext";
+import Frontpage from "../Components/frontpage";
 
 function App() {
   const [todoList, setTodoList] = useState([]);
@@ -35,7 +36,10 @@ function App() {
             </div>
           </nav>
         </div>
+       
+       
         <Routes>
+        <Route path="/" element={<Frontpage />} />
           <Route path="/create" element={<CreateItem />} />
           <Route
             path={`/edit/${idForUpdate}`}

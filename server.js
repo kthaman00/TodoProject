@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const app = express();
 const path = require("path");
 const { Users } = require("./models/users");
-const PORT = 6000;
+const PORT = 2500;
 
 //its the URL from Mongo database with user id and password
 

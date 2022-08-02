@@ -10,6 +10,7 @@ function EditItem(props) {
       .put(`/edit/${props.idForUpdate}`, name)
       .then((response) => {
         console.log(response);
+        alert(`Value has changed to ${response.data.name}`)
       })
       .catch((err) => {
         console.log(err);
@@ -21,8 +22,15 @@ function EditItem(props) {
   };
 
   return (
-    <div className="mb-3">
-      <label htmlFor="name" className="form-label">
+    <div style={{display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center"}}>
+      <h1>For now you can only edit name ! :)</h1>
+      <h5>If you want to go back click TodoList in NavBar to see the Updation !!</h5>
+      <br />
+      <br />
+      
+      
+    <div style={{width:700,marginBottom:20}} className="mb-3">
+      <label style={{fontWeight:"700"}} htmlFor="name" className="form-label">
         Name
       </label>
       <input
@@ -31,7 +39,10 @@ function EditItem(props) {
         className="form-control"
         id="name"
       />
-      <button onClick={updatedata}>Update</button>
+      <div style={{marginTop:20,display:"flex",justifyContent:"center",alignItems:"center"}} >
+      <button style={{padding:10,width:100,backgroundColor:"black",color:"white",textDecoration:"none",textAlign:"center",display:"flex",justifyContent:"center",alignItems:"center",borderRadius:30}} onClick={updatedata}>Update</button>
+      </div>
+    </div>
     </div>
   );
 }
